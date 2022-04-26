@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collatz Visualizer</title>
+    <script src="./js/chart.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div id="navs">
+        <h1>Collatz Visualizer</h1>
+        <ul>
+          <li><a href="#main-table">Patterns</a></li>
+          <!-- <li><a href='#learn'>Learn More</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div id="chartDiv">
+        <canvas id="chart"></canvas>
+      </div>
+      <div id="chart-btn">
+        <button id="share">Share Chart</button>
+        <!-- <button id="embed">Embed Chart</button> -->
+        <button id="png">Download As PNG</button>
+        <button id="jpeg">Download As JPEG</button>
+      </div>
+      <h2>Chart Details:</h2>
+      <div id="form">
+        <label for="number"
+          >Numbers: [ Write numbers separated by comma to plot multiple numbers!
+          ]</label
+        >
+        <input value="" type="text" id="number" />
+        <label for="typex">Scale For X Axis:</label>
+        <select id="typex">
+          <option value="logarithmic">Logarithmic</option>
+          <option value="linear">Linear</option>
+        </select>
+        <label for="typey">Scale For Y Axis:</label>
+        <select id="typey">
+          <option value="logarithmic">Logarithmic</option>
+          <option value="linear">Linear</option>
+        </select>
+        <label for="algo">Algorithm:</label>
+        <select id="algo">
+          <option value="3x+1">3x+1 (Collatz)</option>
+          <option value="4x-4">4x-4</option>
+          <option value="3x-3">3x-3</option>
+          <option value="3x+3">3x+3</option>
+          <option value="2x-2">2x-2</option>
+        </select>
+        <button id="visualize">Visualize</button>
+      </div>
+      <h2>Some Patterns:</h2>
+      <table id="main-table">
+        <thead>
+          <tr>
+            <td>Pattern</td>
+            <td>If Divisible By</td>
+            <td>Divided By</td>
+            <td>Else</td>
+            <td>Patterns Tends Towards</td>
+            <td>Important Points</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!-- <h2>Learning Resources:</h2> -->
+      <!-- <div id="learn">
+      </div> -->
+      <h2>Contact:</h2>
+      <div id="contact">
+        <h3>
+          Did you find something interesting or you have a suggestion?<br />Write
+          to me here:
+        </h3>
+        <form
+          action="https://formsubmit.co/bajajkeshav111@gmail.com"
+          method="post"
+        >
+          <input required type="text" placeholder="Name" />
+          <input required type="text" placeholder="E-mail" />
+          <textarea required placeholder="Message"></textarea>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Built Using
+        <a href="https://www.chartjs.org/" target="_blank">Chart JS</a>
+      </p>
+      <p>
+        Hosted With
+        <a href="https://pages.github.com/" target="_blank">Github Pages</a>
+      </p>
+      <p>
+        Find The Source Code
+        <a target="_blank" href="https://github.com/keshav-bajaj/collatz"
+          >Here</a
+        >
+      </p>
+      <p>
+        Made By
+        <a target="_blank" href="https://keshav-bajaj.github.io"
+          >Keshav Bajaj</a
+        >
+      </p>
+    </footer>
+    <script src="./js/app.js" defer></script>
+  </body>
+</html>
