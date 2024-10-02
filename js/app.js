@@ -311,7 +311,7 @@ plot(process());
 // This makes the url and changes it in the bar
 document.getElementById('visualize').addEventListener('click', () => {
     document.getElementById('chartDiv').innerHTML = '<canvas id="chart"></canvas>';
-    window.history.pushState('page2', 'Title', `/index.html?typex=${document.getElementById('typex').value}&typey=${document.getElementById('typey').value}&n=${document.getElementById('number').value}&algo=${document.getElementById('algo').value}`);
+    window.history.pushState('page2', 'Title', `/collatz/index.html?typex=${document.getElementById('typex').value}&typey=${document.getElementById('typey').value}&n=${document.getElementById('number').value}&algo=${document.getElementById('algo').value}`);
     plot(process());
 });
 let general = "Here x has to be a positive, non-zero and real number.";
